@@ -14,12 +14,16 @@ class Student extends Worker Trait
     public function __construct($dual=null)
     {
         if ($dual !=null){
-
+            $this->dual =$dual;
         }
     }
-    public function render();
+
+    public function render()
     {
-        echo "El estudiant te el nom" .$this->s
+        if($this->dual){
+
+        }
+
     }
 
 }

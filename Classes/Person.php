@@ -24,6 +24,33 @@ class Person
     public $sn2;
 
     /**
+     * Person constructor.
+     * @param $personalId
+     * @param $givenName
+     * @param $email
+     * @param $postalAddress
+     * @param $locality
+     * @param $postalCode
+     * @param $state
+     * @param $country
+     * @param $sn1
+     * @param $sn2
+     */
+    public function __construct($personalId, $givenName, $email, $postalAddress, $locality, $postalCode, $state, $country, $sn1, $sn2)
+    {
+        $this->personalId = $personalId;
+        $this->givenName = $givenName;
+        $this->email = $email;
+        $this->postalAddress = $postalAddress;
+        $this->locality = $locality;
+        $this->postalCode = $postalCode;
+        $this->state = $state;
+        $this->country = $country;
+        $this->sn1 = $sn1;
+        $this->sn2 = $sn2;
+    }
+
+    /**
      * @return mixed
      */
     public function getEmail()
@@ -182,4 +209,5 @@ class Person
     {
         $this->personalId = $personalId;
     }
+
 }
