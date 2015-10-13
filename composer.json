@@ -1,0 +1,15 @@
+{
+  "name": "javi/school",
+  "authors": [
+    {
+      "name": "Javi López",
+      "email": "javierlopez1@iesebre.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Com\\Iesebre\\Dam2\\jlm\\" : "Classes"
+    }
+  },
+  "require": {}
+}
