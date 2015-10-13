@@ -8,48 +8,57 @@
  */
 class Person
 {
+    public $type = "persona";
     /**
-     * identificador de la persona
+     * Personal identification (f.e.; DNI, NIF, NIE...)
      * @var
      */
     public $personalId;
-    public $givenName;
-    public $email;
-    public $postalAddress;
-    public $locality;
-    public $postalCode;
-    public $state;
-    public $country;
-    public $sn1;
-    public $sn2;
-
     /**
-     * Person constructor.
-     * @param $personalId
-     * @param $givenName
-     * @param $email
-     * @param $postalAddress
-     * @param $locality
-     * @param $postalCode
-     * @param $state
-     * @param $country
-     * @param $sn1
-     * @param $sn2
+     * Name
+     * @var
      */
-    public function __construct($personalId, $givenName, $email, $postalAddress, $locality, $postalCode, $state, $country, $sn1, $sn2)
-    {
-        $this->personalId = $personalId;
-        $this->givenName = $givenName;
-        $this->email = $email;
-        $this->postalAddress = $postalAddress;
-        $this->locality = $locality;
-        $this->postalCode = $postalCode;
-        $this->state = $state;
-        $this->country = $country;
-        $this->sn1 = $sn1;
-        $this->sn2 = $sn2;
-    }
-
+    public $givenName;
+    /**
+     * Surname 1
+     * @var
+     */
+    public $sn1;
+    /**
+     * Surname 2
+     * @var
+     */
+    public $sn2;
+    /**
+     * Personal email
+     * @var
+     */
+    public $email;
+    /**
+     * Personal postal address
+     * @var
+     */
+    public $postalAddress;
+    /**
+     * Personal locality
+     * @var
+     */
+    public $locality;
+    /**
+     * Personal Postal Code
+     * @var
+     */
+    public $postalCode;
+    /**
+     * Personal State
+     * @var
+     */
+    public $state;
+    /**
+     * Personal Country
+     * @var
+     */
+    public $country;
     /**
      * @return mixed
      */
@@ -57,7 +66,6 @@ class Person
     {
         return $this->email;
     }
-
     /**
      * @param mixed $email
      */
@@ -65,7 +73,6 @@ class Person
     {
         $this->email = $email;
     }
-
     /**
      * @return mixed
      */
@@ -73,7 +80,6 @@ class Person
     {
         return $this->postalAddress;
     }
-
     /**
      * @param mixed $postalAddress
      */
@@ -81,7 +87,6 @@ class Person
     {
         $this->postalAddress = $postalAddress;
     }
-
     /**
      * @return mixed
      */
@@ -89,7 +94,6 @@ class Person
     {
         return $this->locality;
     }
-
     /**
      * @param mixed $locality
      */
@@ -97,7 +101,6 @@ class Person
     {
         $this->locality = $locality;
     }
-
     /**
      * @return mixed
      */
@@ -105,7 +108,6 @@ class Person
     {
         return $this->postalCode;
     }
-
     /**
      * @param mixed $postalCode
      */
@@ -113,7 +115,6 @@ class Person
     {
         $this->postalCode = $postalCode;
     }
-
     /**
      * @return mixed
      */
@@ -121,7 +122,6 @@ class Person
     {
         return $this->state;
     }
-
     /**
      * @param mixed $state
      */
@@ -129,7 +129,6 @@ class Person
     {
         $this->state = $state;
     }
-
     /**
      * @return mixed
      */
@@ -137,7 +136,6 @@ class Person
     {
         return $this->country;
     }
-
     /**
      * @param mixed $country
      */
@@ -145,39 +143,6 @@ class Person
     {
         $this->country = $country;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getGivenName()
-    {
-        return $this->givenName;
-    }
-
-    /**
-     * @param mixed $givenName
-     */
-    public function setGivenName($givenName)
-    {
-        $this->givenName = $givenName;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSn1()
-    {
-        return $this->sn1;
-    }
-
-    /**
-     * @param mixed $sn1
-     */
-    public function setSn1($sn1)
-    {
-        $this->sn1 = $sn1;
-    }
-
     /**
      * @return mixed
      */
@@ -185,7 +150,6 @@ class Person
     {
         return $this->sn2;
     }
-
     /**
      * @param mixed $sn2
      */
@@ -193,7 +157,34 @@ class Person
     {
         $this->sn2 = $sn2;
     }
-
+    /**
+     * @return mixed
+     */
+    public function getSn1()
+    {
+        return $this->sn1;
+    }
+    /**
+     * @param mixed $sn1
+     */
+    public function setSn1($sn1)
+    {
+        $this->sn1 = $sn1;
+    }
+    /**
+     * @return mixed
+     */
+    public function getGivenName()
+    {
+        return $this->givenName;
+    }
+    /**
+     * @param mixed $givenName
+     */
+    public function setGivenName($givenName)
+    {
+        $this->givenName = $givenName;
+    }
     /**
      * @return mixed
      */
@@ -201,7 +192,6 @@ class Person
     {
         return $this->personalId;
     }
-
     /**
      * @param mixed $personalId
      */
@@ -209,5 +199,8 @@ class Person
     {
         $this->personalId = $personalId;
     }
-
+    public function render()
+    {
+        echo "La {$this->type} es diu " . $this->getGivenName();
+    }
 }

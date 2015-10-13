@@ -6,7 +6,6 @@
  * Date: 5/10/15
  * Time: 19:58
  */
-class Courses
+class Course
 {
-
 }

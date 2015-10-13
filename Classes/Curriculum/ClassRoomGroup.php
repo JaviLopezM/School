@@ -9,25 +9,30 @@
 namespace Com\Iesebre\Dam2\javilopez\Curriculum;
 
 use Com\Iesebre\Dam2\javilopez\Persons\Student;
-class ClassRoomGroup
+
+class ClassroomGroup
 {
     public $students = array();
-
-    public function __construct(array $students)
+    function __construct(array $students)
     {
         $this->students = $students;
     }
-
-    /**
-     * @param $Student
-     */
     public function addStudent(Student $student)
     {
-    array_push($this->students,$students);
-
+        array_push($this->students, $student);
     }
-    public function addCourse(Course,$student)
+    /**
+     * @return array
+     */
+    public function getStudents()
     {
-        array_push($this->Course,$students);
-
+        return $this->students;
     }
+    /**
+     * @param array $students
+     */
+    public function setStudents($students)
+    {
+        $this->students = $students;
+    }
+}

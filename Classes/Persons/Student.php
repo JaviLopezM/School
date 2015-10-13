@@ -6,24 +6,22 @@
  * Date: 5/10/15
  * Time: 17:50
  */
-class Student extends Worker Trait
+class Student extends Person
 {
     use Worker;
-
-    public $classRoomGroup;
-    public function __construct($dual=null)
+    public $dual = false;
+    public $classroomGroup;
+    public function __construct($dual = null)
     {
-        if ($dual !=null){
-            $this->dual =$dual;
-        }
+        $this->type = "estudiant";
+        if ($dual != null)
+            $this->$dual;
     }
-
     public function render()
     {
-        if($this->dual){
-
-        }
-
+        if ($this->dual == true) {
+            echo parent::render() . ", i cobra " . $this->salary;
+        } else
+            parent::render();
     }
-
 }
