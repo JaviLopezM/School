@@ -1,15 +1,12 @@
 {
-  "name": "javi/school",
-  "authors": [
-    {
-      "name": "Javi López",
-      "email": "javierlopez1@iesebre.com"
+    "name": "root/school",
+    "authors": [
+        {
+            "name": "Javi",
+            "email": "javierlopez1@iesebre.com"
+        }
+    ],
+    "require": {
+        "fzaninotto/faker": "^1.5"
     }
-  ],
-  "autoload": {
-    "psr-4": {
-      "Com\\Iesebre\\Dam2\\jlm\\" : "Classes"
-    }
-  },
-  "require": {}
 }
