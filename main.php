@@ -9,9 +9,11 @@
 
 require __DIR__ . "/vendor/autoload.php";
 
-use Com\Iesebre\Dam2\Mdk\Persons\Person;
+
+use Com\Iesebre\Dam2\javilopez\Persons\Person;
 
 $person = new Person();
 $person->type = "senyoreta";
 $person->setGivenName("Pepita palotes\n");
-$person->render();
+$person->render();;
+
