@@ -6,7 +6,7 @@
  * Date: 5/10/15
  * Time: 18:26
  */
-trait Worker
+class Worker extends Person
 {
     /**
      * @var

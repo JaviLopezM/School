@@ -10,18 +10,22 @@ class Student extends Person
 {
     use Worker;
     public $dual = false;
-    public $classroomGroup;
-    public function __construct($dual = null)
+    public $specialization;
+    public function __construct($dual)
     {
-        $this->type = "estudiant";
-        if ($dual != null)
-            $this->$dual;
+        parent::__construct();
+        if ($dual != null) {
+            $this->dual = $dual;
+        }
     }
     public function render()
     {
-        if ($this->dual == true) {
-            echo parent::render() . ", i cobra " . $this->salary;
-        } else
+        $this->type = "estudiant";
+        if($this->dual){
+            parent::render() . " i cobra" . $this->salary;
+        } else {
             parent::render();
+        }
+        parent::render();
     }
 }

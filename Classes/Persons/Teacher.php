@@ -29,7 +29,7 @@ class Teacher extends Person
     }
     public function render()
     {
-        $this->type = "Professor";
+        $this->type = "professor";
         parent::render();
     }
 }

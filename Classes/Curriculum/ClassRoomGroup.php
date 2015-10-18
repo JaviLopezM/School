@@ -12,11 +12,22 @@ use Com\Iesebre\Dam2\javilopez\Persons\Student;
 
 class ClassroomGroup
 {
+    /**
+     * Matriu d'estudiants.
+     * @var array
+     */
     public $students = array();
-    function __construct(array $students)
+    /**
+     * ClassroomGroup constructor.
+     * @param array $students
+     */
+    public function __construct(array $students)
     {
         $this->students = $students;
     }
+    /**
+     * @param Student $student
+     */
     public function addStudent(Student $student)
     {
         array_push($this->students, $student);
