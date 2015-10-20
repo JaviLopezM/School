@@ -10,5 +10,5 @@ $ composer install
  
 # Pàgina web
 
-[javierlopezm.github.io/school][http://javierlopezm.github.io/github]
+[javierlopezm.github.io/school] [http://javierlopezm.github.io/github]
 
